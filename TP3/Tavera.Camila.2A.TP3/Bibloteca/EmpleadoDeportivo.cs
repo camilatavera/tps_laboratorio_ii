@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bibloteca
 {
-    public class EmpleadoDeportivo:Persona, IDeportivos, IEmpleado
+    public class EmpleadoDeportivo:Persona, IEmpleado
     {
         
         List<Equipo> equipos;
@@ -23,12 +23,26 @@ namespace Bibloteca
            
         }
 
+
+        /// <summary>
+        /// Crea un equipo y lo agrega a la lista de equipos si no se repite.
+        /// </summary>
+        /// <param name="categoria"></param>
+        /// <param name="deporte"></param>
+        /// <param name="sexo"></param>
+        /// <returns>bool</returns>
         public bool agregarEquipo(ECategoria categoria, EDeporte deporte, Esexo sexo)
         {
             Equipo equipo = new Equipo(categoria, deporte, sexo);
             return this + equipo;
         }
 
+
+        /// <summary>
+        /// Borra el equipo pasado por parametro de la lista de la clase
+        /// </summary>
+        /// <param name="equipo"></param>
+        /// <returns></returns>
         public bool borrarEquipo(Equipo equipo)
         {
             if(this - equipo)
@@ -40,8 +54,11 @@ namespace Bibloteca
 
        
 
-
-        int CalcularSueldo()
+        /// <summary>
+        /// Interfaz IEmpleado: calcula el sueldo del empleado deportivo
+        /// </summary>
+        /// <returns>int</returns>
+        public int CalcularSueldo()
         {
             int sueldoBase = 80000;
             int cantEquipos = Equipos.Count;
@@ -55,17 +72,19 @@ namespace Bibloteca
 
         }
 
+        /// <summary>
+        /// propiedad de la interfaz: devuelve el metodo calcular sueldo
+        /// </summary>
         public int Sueldo
         {
             get { return CalcularSueldo(); }
         }
 
 
-        public override string DatosGenerales
-        {
-            get { return $"{base.ToString()} | Tipo: deportivo"; }
-        }
-
+       
+        /// <summary>
+        /// propiedad de lectura y escritura del atributo equipos
+        /// </summary>
         public List<Equipo> Equipos
         {
             get { return this.equipos; }
@@ -75,13 +94,20 @@ namespace Bibloteca
         
 
         
-
+        /// <summary>
+        /// junta los datos mas imporantes del empleado
+        /// </summary>
+        /// <returns>string </returns>
         public override string ToString()
         {
             return $"{base.ToString()} - Deportivo";
         }
 
-
+        /// <summary>
+        /// Valida que la lista de equipos no tenga errores o incoherencias
+        /// </summary>
+        /// <param name="listaNueva"></param>
+        /// <returns>bool</returns>
         public bool validarEquipos(List<Equipo> listaNueva)
         {
             bool ret = false;
@@ -105,10 +131,7 @@ namespace Bibloteca
             return ret;
         }
 
-        int IEmpleado.CalcularSueldo()
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public static bool operator +(EmpleadoDeportivo a, Equipo b)
         {

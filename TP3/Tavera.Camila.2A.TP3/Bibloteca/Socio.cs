@@ -33,24 +33,39 @@ namespace Bibloteca
             this.APagar = aPagar;
         }
 
+
+        /// <summary>
+        /// propiedad de lectura y escritura del atributo categoria
+        /// </summary>
         public ECategoria Categoria
         {
             get { return categoria;  }
             set { categoria = value; }
         }
 
-        public  int CuotaSocial
+        /// <summary>
+        /// propiedad de lectura de la cuota social
+        /// </summary>
+        public int CuotaSocial
         {
             get {return this.calcularCuota(); }
             
         }
 
+        /// <summary>
+        /// propiedad de lectura y escritura del atributo APagar
+        /// </summary>
         public int APagar
         {
             get { return aPagar; }
             set { aPagar = value; }
         }
 
+
+        /// <summary>
+        /// calcula la cuota social segun el atributo categoria
+        /// </summary>
+        /// <returns>int:cuota soical</returns>
         protected virtual int calcularCuota()
         {
             if (Categoria == ECategoria.menores)
@@ -68,6 +83,9 @@ namespace Bibloteca
            
         }
 
+        /// <summary>
+        /// genera una deuda en el atributo a pagar.
+        /// </summary>
         protected void generarDeuda()
         {
             Random aux = new Random();
@@ -76,17 +94,19 @@ namespace Bibloteca
             
         }
 
+       
         public override string ToString()
         {
             return $"{base.ToString()} | Categoria: {Categoria} | Cuota mensual {CuotaSocial} | A pagar: {aPagar}";
 
         }
 
-        public override string DatosGenerales
-        {
-            get { return $"{ToString()} | Federado: No";  }
-        }
-
+        
+        /// <summary>
+        /// Escribe la un string segun lo abonado por el socio
+        /// </summary>
+        /// <param name="montoIngresado"></param>
+        /// <returns> resuelto </returns>
         public string escribirFactura(int montoIngresado)
         {
             StringBuilder sb = new StringBuilder();
@@ -110,6 +130,15 @@ namespace Bibloteca
 
         } 
 
+        /// <summary>
+        /// Actualiza los valores de los atributos del objeto si corresponde
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <returns>bool</returns>
         public  bool actualizarDatos(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria)
         {
             bool ret=actualizarDatos(nombre, apellido, sexo, fechaNacimiento);
@@ -122,6 +151,12 @@ namespace Bibloteca
             return ret;
         }
 
+        /// <summary>
+        /// valida que el monto coincida con lo que debe el socio y con lo que abona de cuota
+        /// </summary>
+        /// <param name="montoIngresado"></param>
+        /// <param name="ingresoInt"></param>
+        /// <returns>bool</returns>
         public bool validarMonto(string montoIngresado, out int ingresoInt)
         {
             int ingreso=0;
@@ -142,6 +177,11 @@ namespace Bibloteca
 
         }
 
+
+        /// <summary>
+        /// le resta al atributo APagar lo que abono el socio
+        /// </summary>
+        /// <param name="monto"></param>
         public void saldarDeuda(int monto)
         {
             this.aPagar -= monto;

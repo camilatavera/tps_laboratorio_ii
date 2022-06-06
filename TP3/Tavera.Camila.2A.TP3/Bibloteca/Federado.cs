@@ -6,18 +6,12 @@ using System.Threading.Tasks;
 
 namespace Bibloteca
 {
-    public class Federado:Socio, IDeportivos
+    public class Federado:Socio
     {
         List<EDeporte> deportes;
 
 
-        public Federado()
-        {
-
-        }
-
-       
-
+      
         public Federado(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, List<EDeporte> deportes) :
             base(nombre, apellido, sexo, fechaNacimiento, categoria)
         {
@@ -29,17 +23,20 @@ namespace Bibloteca
         
 
 
-        public Federado(Socio socio, List<EDeporte> deportes) :this(socio.Nombre, socio.Apellido, socio.Sexo, socio.FechaNacimiento, socio.Categoria, deportes)
-        {
-
-        }
-
+       
+        /// <summary>
+        /// propiedad de lectura del atributo deportes
+        /// </summary>
        public List<EDeporte> Deportes
         {
             get { return deportes; }
         }
 
 
+        /// <summary>
+        /// agrega un deporte a la lista o larga una excepcion en caso de que el deporte ya este en la lista
+        /// </summary>
+        /// <param name="deporte"></param>
         public void agregarDeporte(EDeporte deporte)
         {
             if (!(this + deporte))
@@ -48,6 +45,11 @@ namespace Bibloteca
             }
         }
 
+
+        /// <summary>
+        /// calcula la cuota social del objeto
+        /// </summary>
+        /// <returns>int</returns>
         protected override int calcularCuota()
         {
             if(Deportes is null)
@@ -68,6 +70,77 @@ namespace Bibloteca
             }
 
             return cuota;
+        }
+
+        /// <summary>
+        /// Borra el deporte de la lista si lo eencuentra
+        /// </summary>
+        /// <param name="deporte"></param>
+        /// <returns>bool</returns>
+        public bool borrarDeporte(EDeporte deporte)
+        {
+            return this - deporte;
+        }
+
+
+
+        /// <summary>
+        /// Devuelve un string con los deportes del federado
+        /// </summary>
+        /// <returns>string</returns>
+        private string devolverDeportes()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (EDeporte item in deportes)
+            {
+                sb.Append($"{item.ToString()} - ");
+            }
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Valida que los deportes de la lista pasado por parametro coincidan con los de la lista 
+        /// del atributo de la clase
+        /// </summary>
+        /// <param name="deportesNuevos"></param>
+        /// <returns>bool</returns>
+        public bool validarDeportes(List<EDeporte> deportesNuevos)
+        {
+            if (deportesNuevos is null || deportesNuevos.Count == 0)
+            {
+                throw new ExNoHayDeportes();
+            }
+
+            if (this.Deportes.Count != deportesNuevos.Count)
+            {
+                return limpiarDeportes(deportesNuevos);
+            }
+            else
+            {
+                foreach (EDeporte item in deportesNuevos)
+                {
+                    if (this.Deportes.Contains(item))
+                    {
+                        return limpiarDeportes(deportesNuevos);
+                    }
+                }
+            }
+
+            return false;
+        }
+
+
+
+        /// <summary>
+        /// limpia la lista de deportes del atributo
+        /// </summary>
+        /// <param name="deportesNuevos"></param>
+        /// <returns>bool</returns>
+        private bool limpiarDeportes(List<EDeporte> deportesNuevos)
+        {
+            this.Deportes.Clear();
+            this.Deportes.AddRange(deportesNuevos);
+            return true;
         }
 
 
@@ -112,23 +185,7 @@ namespace Bibloteca
             return false;
         }
 
-        public bool borrarDeporte(EDeporte deporte)
-        {
-            return this - deporte;
-        }
-
-
-
-
-        private string devolverDeportes()
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach(EDeporte item in deportes)
-            {
-                sb.Append($"{item.ToString()} - ");
-            }
-            return sb.ToString();
-        }
+       
 
         public override string ToString()
         {      
@@ -139,37 +196,7 @@ namespace Bibloteca
 
        
        
-        public bool validarDeportes(List<EDeporte> deportesNuevos)
-        {
-            if (deportesNuevos is null || deportesNuevos.Count ==0)
-            {
-                throw new ExNoHayDeportes();
-            }
-
-            if(this.Deportes.Count!=deportesNuevos.Count)
-            {
-                return limpiarDeportes(deportesNuevos);
-            }
-            else
-            {
-               foreach(EDeporte item in deportesNuevos)
-               {
-                    if (this.Deportes.Contains(item))
-                    {
-                        return limpiarDeportes(deportesNuevos);
-                    }
-               }
-            }
-               
-            return false;
-        }
-
-        private bool limpiarDeportes(List<EDeporte> deportesNuevos)
-        {
-            this.Deportes.Clear();
-            this.Deportes.AddRange(deportesNuevos);
-            return true;
-        }
+       
 
 
     }

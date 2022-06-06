@@ -100,7 +100,6 @@ namespace AdministracionClub
                 if (socio.GetType() == typeof(Federado))
                 {
                     this.federado = (Federado)socio;
-                    //gb_deportes.Visible = true;
                     gbox_deportes.Visible = true;
                     cargarDeportes();
 

@@ -26,28 +26,49 @@ namespace Bibloteca
 
         }
 
+        /// <summary>
+        /// Propiedad de lectura del atributo Socios
+        /// </summary>
         public static List<Socio> Socios
         {
             get { return socios; }
         }
 
+
+        /// <summary>
+        /// Propiedad de lectura del atributo Federados
+        /// </summary>
         public static List<Federado> Federados
         {
             get { return federados; }
         }
 
 
+
+        /// <summary>
+        /// Propiedad de lectura del atributo Deportivos
+        /// </summary>
         public static List<EmpleadoDeportivo> Deportivos
         {
             get { return deportivos; }
         }
 
+
+        /// <summary>
+        /// Propiedad de lectura del atributo Operativos
+        /// </summary>
         public static List<EmpleadoOperativo> Operativos
         {
             get { return operativos; }
         }
 
 
+
+        /// <summary>
+        /// Busca el objeto que se pasa por parametro en la lista Federados de la clase
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <returns>objeto encontrado o null</returns>
         public static Federado buscarFederado(Socio federado)
         {
             foreach(Federado item in federados)
@@ -61,6 +82,12 @@ namespace Bibloteca
             
         }
 
+
+        /// <summary>
+        /// Busca el objeto que se pasa por parametro en la lista Socios de la clase
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <returns>objeto encontrado o null</returns>
         public static Socio buscarSocio(Socio socio)
         {
             foreach (Socio item in socios)
@@ -74,6 +101,18 @@ namespace Bibloteca
 
         }
 
+
+        /// <summary>
+        /// crea y agrega un federado a la lista federados de la clase
+        /// En caso de estar repetido lanza una excepcion 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <param name="deportes"></param>
+        /// <returns></returns>
         public static bool agregarFederado(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, List<EDeporte> deportes)
         {
 
@@ -91,6 +130,18 @@ namespace Bibloteca
 
         }
 
+
+        /// <summary>
+        /// crea y agrega un socio a la lista socios de la clase
+        /// En caso de estar repetido lanza una excepcion 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <param name="deportes"></param>
+        /// <returns>true o lanza excepcion</returns>
         public static bool agregarSocio(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria)
         {
            Socio socio = new Socio(nombre, apellido, sexo, fechaNacimiento, categoria);
@@ -107,6 +158,18 @@ namespace Bibloteca
 
         }
 
+
+        /// <summary>
+        /// crea y agrega un emepleado deportivo a la lista deportivos de la clase
+        /// En caso de estar repetido lanza una excepcion 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <param name="deportes"></param>
+        /// <returns>true o lanza excepcion</returns>
         public static bool agregarDeportivo(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, List<Equipo> equipos)
         {
             EmpleadoDeportivo deportivo = new EmpleadoDeportivo(nombre, apellido, sexo, fechaNacimiento, equipos);
@@ -123,6 +186,32 @@ namespace Bibloteca
         }
 
 
+
+        public static bool agregarOpeprativo(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, EArea area)
+        {
+            EmpleadoOperativo operativo = new EmpleadoOperativo(nombre, apellido, sexo, fechaNacimiento, area);
+            foreach (EmpleadoOperativo item in Operativos)
+            {
+                if (item == operativo)
+                {
+                    throw new ExPersonaRepetida($"El Empleado Operativo {apellido} ya esta anotado");
+                }
+            }
+
+            operativos.Add(operativo);
+            return true;
+        }
+
+        /// <summary>
+        /// autaliza los atributos del objeto si corresponde
+        /// </summary>
+        /// <param name="socio"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <returns>bool</returns>
         public static bool UpdateSocio(Socio socio, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria)
         {
             Socio aux;
@@ -138,7 +227,17 @@ namespace Bibloteca
             return false;
         }
 
-
+        /// <summary>
+        /// autaliza los atributos del objeto si corresponde
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <param name="deportes"></param>
+        /// <returns>bool </returns>
         public static bool UpdateFederado(Federado federado, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, List<EDeporte> deportes)
         {
             Federado aux;
@@ -169,7 +268,16 @@ namespace Bibloteca
         }
 
 
-
+        /// <summary>
+        /// autaliza los atributos del objeto si corresponde
+        /// </summary>
+        /// <param name="deportivo"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="deportes"></param>
+        /// <returns>bool</returns>
         public static bool UpdateDeportivo(EmpleadoDeportivo deportivo, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, List<Equipo> deportes)
         {
             
@@ -201,6 +309,16 @@ namespace Bibloteca
         }
 
 
+        /// <summary>
+        /// autaliza los atributos del objeto si corresponde
+        /// </summary>
+        /// <param name="operativo"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="area"></param>
+        /// <returns>bool</returns>
         public static bool UpdateOperativo(EmpleadoOperativo operativo, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, EArea area)
         {
             EmpleadoOperativo aux;
@@ -216,6 +334,12 @@ namespace Bibloteca
             return false;
         }
 
+
+        /// <summary>
+        /// Busca al objeto pasado por parametro en la lista Operativos de la clase
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <returns>EmpleadoOperativo o null</returns>
         public static EmpleadoOperativo buscarOperativo(Persona persona)
         {
             foreach(EmpleadoOperativo item in Operativos)
@@ -228,6 +352,12 @@ namespace Bibloteca
             return null;
         }
 
+
+        /// <summary>
+        /// Busca al objeto pasado por parametro en la lista Deportivos de la clase
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <returns>EmpleadoDeportivo o null</returns>
         public static EmpleadoDeportivo buscarDeportivo(Persona persona)
         {
             foreach (EmpleadoDeportivo item in Deportivos)
@@ -240,12 +370,24 @@ namespace Bibloteca
             return null;
         }
 
+
+        /// <summary>
+        /// llama a la clase socio para generar la factura
+        /// </summary>
+        /// <param name="socio"></param>
+        /// <param name="montoIngresado"></param>
+        /// <returns>string</returns>
         public static string generarFactura(Socio socio, int montoIngresado)
         {
             return socio.escribirFactura(montoIngresado);
 
         }
 
+        /// <summary>
+        /// Buscar al socio en la lista socios de la clase y lo borra
+        /// </summary>
+        /// <param name="socio"></param>
+        /// <returns>bool</returns>
         public static bool borrarSocio(Socio socio)
         {
             for (int i = 0; i < socios.Count; i++)
@@ -261,6 +403,12 @@ namespace Bibloteca
             
         }
 
+
+        /// <summary>
+        /// Buscar al elemento pasado por parametro en la lista Federados de la clase y lo borra
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <returns>bool</returns>
         public static bool borrarFederado(Federado federado)
         {
             for (int i = 0; i < federados.Count; i++)
@@ -276,6 +424,10 @@ namespace Bibloteca
 
         }
 
+
+        /// <summary>
+        /// Crea los objetos iniciales y los agrega a la lista correspondiente.
+        /// </summary>
         private static void sociosIniciales()
         {
             Socio socio4 = new Socio("Mariano", "Gomez", Esexo.m, new DateTime(2004, 4, 4), ECategoria.menores);

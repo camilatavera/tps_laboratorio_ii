@@ -174,7 +174,26 @@ namespace AdministracionClub
             else
             {
                 area = (EArea)cmb_area.SelectedItem;
-                if (Club.UpdateOperativo(operativo, nombre, apellido, sexo, nacimiento, area))
+                if (operativo is null)
+                {
+                    if (validarCamposLlenos())
+                    {
+
+                        try
+                        {
+                            Club.agregarOpeprativo(nombre, apellido, sexo, nacimiento, area);
+                            MessageBox.Show($"Empleado {apellido} se creo con exito", "Creacion exitosa", MessageBoxButtons.OK);
+
+                        }
+                        catch (ExPersonaRepetida ex)
+                        {
+                            MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                        AbrirListado();
+                    }
+                }
+                else if (Club.UpdateOperativo(operativo, nombre, apellido, sexo, nacimiento, area))
                 {
                     MessageBox.Show($"Empleado {apellido} actualizado con exito", "Actualizacion exitosa", MessageBoxButtons.OK);
                     AbrirListado();

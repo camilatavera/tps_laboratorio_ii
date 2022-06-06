@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "AdministracionClub/1.0.0": {
+        "dependencies": {
+          "Bibloteca": "1.0.0",
+          "ManejoArchivos": "1.0.0"
+        },
+        "runtime": {
+          "AdministracionClub.dll": {}
+        }
+      },
+      "Bibloteca/1.0.0": {
+        "runtime": {
+          "Bibloteca.dll": {}
+        }
+      },
+      "ManejoArchivos/1.0.0": {
+        "runtime": {
+          "ManejoArchivos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AdministracionClub/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Bibloteca/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ManejoArchivos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

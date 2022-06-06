@@ -4,9 +4,7 @@ using System.Xml.Serialization;
 namespace Bibloteca
 {
 
-    //[XmlInclude(typeof(Socio))]
-    //[XmlInclude(typeof(Federado))]
-    [XmlInclude(typeof(EmpleadoDeportivo))]
+    
     [XmlInclude(typeof(EmpleadoOperativo))]
 
     public abstract class Persona
@@ -29,18 +27,29 @@ namespace Bibloteca
             this.FechaNacimiento = fechaNacimiento;
         }
 
+        /// <summary>
+        /// propiedad de lectura y escritura del atributo Nombre
+        /// </summary>
         public string Nombre
         {
             get { return nombre; }
             set { nombre = value; }
         }
 
+
+        /// <summary>
+        /// propiedad de lectura y escritura del atributo Apellido
+        /// </summary>
         public string Apellido
         {
             get { return apellido; }
             set { apellido = value; }
         }
 
+
+        /// <summary>
+        /// propiedad de lectura y escritura del atributo Sexo
+        /// </summary>
         public Esexo Sexo
         {
             get { return sexo; }
@@ -48,6 +57,10 @@ namespace Bibloteca
 
         }
 
+
+        /// <summary>
+        /// propiedad de lectura y escritura del atributo FechaNacimiento
+        /// </summary>
         public DateTime FechaNacimiento
         {
             get { return fechaNacimiento; }
@@ -55,24 +68,23 @@ namespace Bibloteca
         }
 
 
+        /// <summary>
+        /// forma un string con los datos de la persona
+        /// </summary>
+        /// <returns>string</returns>
         public override string ToString()
         {
             return $"Nombre completo: {Nombre} {Apellido} | Sexo: {Sexo} | Fecha: {FechaNacimiento.ToShortDateString()}";
         }
 
-
-        public abstract string DatosGenerales { get; }
-
-        public static bool operator ==(Persona a, Persona b)
-        {
-            return a.nombre == b.nombre && a.apellido == b.apellido;
-        }
-
-        public static bool operator !=(Persona a, Persona b)
-        {
-            return !(a == b);
-        }
-
+        /// <summary>
+        /// Actualiza los valores de los atributos del objeto si corresponde
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <returns>bool</returns>
         public bool actualizarDatos(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento)
         {
             bool ret = false;
@@ -98,6 +110,18 @@ namespace Bibloteca
             }
             return ret;
         }
+
+        public static bool operator ==(Persona a, Persona b)
+        {
+            return a.nombre == b.nombre && a.apellido == b.apellido;
+        }
+
+        public static bool operator !=(Persona a, Persona b)
+        {
+            return !(a == b);
+        }
+
+       
 
 
     }
