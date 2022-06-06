@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfEmpleadoOperativo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EmpleadoOperativo>
+    <Nombre>Juan</Nombre>
+    <Apellido>Perez</Apellido>
+    <Sexo>m</Sexo>
+    <FechaNacimiento>1987-08-21T00:00:00</FechaNacimiento>
+    <Area>administrativo</Area>
+  </EmpleadoOperativo>
+  <EmpleadoOperativo>
+    <Nombre>Facundo</Nombre>
+    <Apellido>Roca</Apellido>
+    <Sexo>m</Sexo>
+    <FechaNacimiento>1987-10-09T00:00:00</FechaNacimiento>
+    <Area>ordenanza</Area>
+  </EmpleadoOperativo>
+  <EmpleadoOperativo>
+    <Nombre>Mariana</Nombre>
+    <Apellido>Cirio</Apellido>
+    <Sexo>f</Sexo>
+    <FechaNacimiento>1987-03-21T00:00:00</FechaNacimiento>
+    <Area>administrativo</Area>
+  </EmpleadoOperativo>
+  <EmpleadoOperativo>
+    <Nombre>Natalia</Nombre>
+    <Apellido>Ciru</Apellido>
+    <Sexo>f</Sexo>
+    <FechaNacimiento>1987-12-20T00:00:00</FechaNacimiento>
+    <Area>ordenanza</Area>
+  </EmpleadoOperativo>
+  <EmpleadoOperativo>
+    <Nombre>Roberto</Nombre>
+    <Apellido>Fuentes</Apellido>
+    <Sexo>m</Sexo>
+    <FechaNacimiento>1987-12-21T00:00:00</FechaNacimiento>
+    <Area>ordenanza</Area>
+  </EmpleadoOperativo>
+</ArrayOfEmpleadoOperativo>
