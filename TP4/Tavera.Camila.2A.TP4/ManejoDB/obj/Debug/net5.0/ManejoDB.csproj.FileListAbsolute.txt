@@ -1,0 +1,17 @@
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\bin\Debug\net5.0\ManejoDB.deps.json
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\bin\Debug\net5.0\ManejoDB.dll
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\bin\Debug\net5.0\ref\ManejoDB.dll
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\bin\Debug\net5.0\ManejoDB.pdb
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\bin\Debug\net5.0\Bibloteca.dll
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\bin\Debug\net5.0\Bibloteca.pdb
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\obj\Debug\net5.0\ManejoDB.csproj.AssemblyReference.cache
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\obj\Debug\net5.0\ManejoDB.GeneratedMSBuildEditorConfig.editorconfig
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\obj\Debug\net5.0\ManejoDB.AssemblyInfoInputs.cache
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\obj\Debug\net5.0\ManejoDB.AssemblyInfo.cs
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\obj\Debug\net5.0\ManejoDB.csproj.CoreCompileInputs.cache
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\obj\Debug\net5.0\ManejoDB.csproj.CopyComplete
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\obj\Debug\net5.0\ManejoDB.dll
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\obj\Debug\net5.0\ref\ManejoDB.dll
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\obj\Debug\net5.0\ManejoDB.pdb
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\bin\Debug\net5.0\ManejoArchivos.dll
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoDB\bin\Debug\net5.0\ManejoArchivos.pdb
