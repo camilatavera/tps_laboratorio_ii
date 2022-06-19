@@ -197,11 +197,19 @@ namespace AdministracionClub
                 }
                 else if(socio is not null)
                 {
-
-                    if (DB.UpdateSocio(socio, nombre, apellido, sexo, nacimiento, categoria))
+                    try
                     {
-                        actualizacionExitosaSocios(apellido);
-                    }                  
+                        if (DB.UpdateSocio(socio, nombre, apellido, sexo, nacimiento, categoria))
+                        {
+                            actualizacionExitosaSocios(apellido);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"ALGO SALIO MAL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
                 }              
             }
         }
@@ -222,11 +230,14 @@ namespace AdministracionClub
         private void btn_cobrar_Click(object sender, EventArgs e)
         {
             FrmCobrarDeuda frmCobrar = new FrmCobrarDeuda(socio);
-            if (frmCobrar.ShowDialog() == DialogResult)
+
+            DialogResult result= frmCobrar.ShowDialog();
+            if (result == DialogResult.OK)
             {
-               
-                txt_apagar.Text = socio.APagar.ToString();
+                this.txt_apagar.Text = socio.APagar.ToString();
             }
+
+
         }
 
         private void btn_baja_Click(object sender, EventArgs e)
@@ -260,6 +271,13 @@ namespace AdministracionClub
                 AbrirFormularioAnterior();
 
             }
+        }
+
+
+        private void FrmSocioDetalle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            AbrirFormularioAnterior();
+
         }
 
 

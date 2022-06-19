@@ -11,20 +11,7 @@ namespace Bibloteca
         ECategoria categoria;
         int aPagar;
 
-        public Socio()
-        {
-
-        }
-
        
-
-        public Socio(int id, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria) :
-            base(id, nombre, apellido, sexo, fechaNacimiento)
-        {
-            this.categoria = categoria;
-            generarDeuda();
-        }
-
 
         public Socio(int id, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, int aPagar) :
             base(id, nombre, apellido, sexo, fechaNacimiento)
@@ -48,7 +35,7 @@ namespace Bibloteca
         /// </summary>
         public int CuotaSocial
         {
-            get {return this.calcularCuota(); }
+            get {return this.CalcularCuota(); }
             
         }
 
@@ -66,7 +53,7 @@ namespace Bibloteca
         /// calcula la cuota social segun el atributo categoria
         /// </summary>
         /// <returns>int:cuota soical</returns>
-        protected virtual int calcularCuota()
+        protected virtual int CalcularCuota()
         {
             if (Categoria == ECategoria.menores)
             {
@@ -83,17 +70,7 @@ namespace Bibloteca
            
         }
 
-        /// <summary>
-        /// genera una deuda en el atributo a pagar.
-        /// </summary>
-        protected void generarDeuda()
-        {
-            Random aux = new Random();
-            int meses = aux.Next(0, 6);
-            this.aPagar = CuotaSocial * meses;
-            
-        }
-
+  
        
         public override string ToString()
         {
@@ -107,7 +84,7 @@ namespace Bibloteca
         /// </summary>
         /// <param name="montoIngresado"></param>
         /// <returns> resuelto </returns>
-        public string escribirFactura(int montoIngresado)
+        public string EscribirFactura(int montoIngresado)
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"PAGO REALIZADO POR {Nombre} {Apellido}");
@@ -139,9 +116,9 @@ namespace Bibloteca
         /// <param name="fechaNacimiento"></param>
         /// <param name="categoria"></param>
         /// <returns>bool</returns>
-        public  bool actualizarDatos(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria)
+        public  bool ActualizarDatos(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria)
         {
-            bool ret=actualizarDatos(nombre, apellido, sexo, fechaNacimiento);
+            bool ret=ActualizarDatos(nombre, apellido, sexo, fechaNacimiento);
             if (this.Categoria != categoria)
             {
                 this.categoria = categoria;
@@ -157,7 +134,7 @@ namespace Bibloteca
         /// <param name="montoIngresado"></param>
         /// <param name="ingresoInt"></param>
         /// <returns>bool</returns>
-        public bool validarMonto(string montoIngresado, out int ingresoInt)
+        public bool ValidarMonto(string montoIngresado, out int ingresoInt)
         {
             int ingreso=0;
             if(!int.TryParse(montoIngresado, out ingreso))
@@ -182,7 +159,7 @@ namespace Bibloteca
         /// le resta al atributo APagar lo que abono el socio
         /// </summary>
         /// <param name="monto"></param>
-        public void saldarDeuda(int monto)
+        public void SaldarDeuda(int monto)
         {
             this.aPagar -= monto;
         }

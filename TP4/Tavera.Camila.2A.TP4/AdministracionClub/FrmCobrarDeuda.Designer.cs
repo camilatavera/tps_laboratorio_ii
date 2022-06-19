@@ -103,6 +103,7 @@ namespace AdministracionClub
             this.Controls.Add(this.txt_deuda);
             this.Name = "FrmCobrarDeuda";
             this.Text = "Cobrando deuda.";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCobrarDeuda_FormClosing);
             this.Load += new System.EventHandler(this.FrmCobrarDeuda_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

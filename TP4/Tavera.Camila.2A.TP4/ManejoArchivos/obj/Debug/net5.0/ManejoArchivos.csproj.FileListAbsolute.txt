@@ -14,7 +14,6 @@ C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArc
 C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArchivos\bin\Debug\net5.0\ManejoArchivos.dll
 C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArchivos\bin\Debug\net5.0\ref\ManejoArchivos.dll
 C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArchivos\bin\Debug\net5.0\ManejoArchivos.pdb
-C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArchivos\obj\Debug\net5.0\ManejoArchivos.csproj.AssemblyReference.cache
 C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArchivos\obj\Debug\net5.0\ManejoArchivos.GeneratedMSBuildEditorConfig.editorconfig
 C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArchivos\obj\Debug\net5.0\ManejoArchivos.AssemblyInfoInputs.cache
 C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArchivos\obj\Debug\net5.0\ManejoArchivos.AssemblyInfo.cs
@@ -22,3 +21,4 @@ C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArc
 C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArchivos\obj\Debug\net5.0\ManejoArchivos.dll
 C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArchivos\obj\Debug\net5.0\ref\ManejoArchivos.dll
 C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArchivos\obj\Debug\net5.0\ManejoArchivos.pdb
+C:\tps_laboratorio_ii_2022\tps_laboratorio_ii\TP4\Tavera.Camila.2A.TP4\ManejoArchivos\obj\Debug\net5.0\ManejoArchivos.csproj.AssemblyReference.cache

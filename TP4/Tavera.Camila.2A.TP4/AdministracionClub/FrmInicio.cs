@@ -33,7 +33,6 @@ namespace AdministracionClub
                 if(taskdb is not null)
                 {
                     await taskdb;
-                    Thread.Sleep(500);
                     break;
                 }
             }
@@ -82,7 +81,6 @@ namespace AdministracionClub
             db.eventoFinal += msj_DB;
             await Club.inicioTask(archivo);
             await db.InicioTask(EForm.empleado);
-            Thread.Sleep(500);
             
         }
 

@@ -11,10 +11,7 @@ namespace Bibloteca
 
         EArea area;
 
-        public EmpleadoOperativo()
-        {
-
-        }
+      
 
         public EmpleadoOperativo(int id, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, EArea area) :
             base(id, nombre, apellido, sexo, fechaNacimiento)
@@ -75,9 +72,9 @@ namespace Bibloteca
         /// <param name="fechaNacimiento"></param>
         /// <param name="area"></param>
         /// <returns>bool </returns>
-        public bool actualizarDatos(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, EArea area)
+        public bool ActualizarDatos(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, EArea area)
         {
-            bool ret = actualizarDatos(nombre, apellido, sexo, fechaNacimiento);
+            bool ret = base.ActualizarDatos(nombre, apellido, sexo, fechaNacimiento);
             if (this.area != area)
             {
                 this.area = area;

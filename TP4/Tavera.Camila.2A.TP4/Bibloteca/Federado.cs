@@ -11,16 +11,9 @@ namespace Bibloteca
         List<EDeporte> deportes;
 
 
-        public Federado() { }
+       
 
-      //borrar si no se usa
-        public Federado(int id, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, List<EDeporte> deportes) :
-            base(id,nombre, apellido, sexo, fechaNacimiento, categoria)
-        {
-            this.deportes = new List<EDeporte>();
-            this.deportes.AddRange(deportes);
-            generarDeuda();
-        }
+ 
 
         public Federado(int id, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, int aPagar):base(id, nombre, apellido, sexo, fechaNacimiento, categoria, aPagar)
         {
@@ -87,14 +80,14 @@ namespace Bibloteca
         /// calcula la cuota social del objeto
         /// </summary>
         /// <returns>int</returns>
-        protected override int calcularCuota()
+        protected override int CalcularCuota()
         {
             if(Deportes is null)
             {
                 return 0;
             }
 
-            int cuota = base.calcularCuota();
+            int cuota = base.CalcularCuota();
 
             foreach(EDeporte deporte in deportes)
             {
@@ -114,7 +107,7 @@ namespace Bibloteca
         /// </summary>
         /// <param name="deporte"></param>
         /// <returns>bool</returns>
-        public bool borrarDeporte(EDeporte deporte)
+        public bool BorrarDeporte(EDeporte deporte)
         {
             return this - deporte;
         }
@@ -125,7 +118,7 @@ namespace Bibloteca
         /// Devuelve un string con los deportes del federado
         /// </summary>
         /// <returns>string</returns>
-        public string devolverDeportes()
+        public string DevolverDeportes()
         {
             StringBuilder sb = new StringBuilder();
             foreach (EDeporte item in deportes)
@@ -150,7 +143,7 @@ namespace Bibloteca
 
             if (this.Deportes.Count != deportesNuevos.Count)
             {
-                return limpiarDeportes(deportesNuevos);
+                return LimpiarDeportes(deportesNuevos);
             }
             else
             {
@@ -158,14 +151,14 @@ namespace Bibloteca
                 {
                     if (!this.Deportes.Contains(item))
                     {
-                        return limpiarDeportes(deportesNuevos);
+                        return LimpiarDeportes(deportesNuevos);
                     }
                 }
                 foreach (EDeporte item in this.Deportes)
                 {
                     if (!deportesNuevos.Contains(item))
                     {
-                        return limpiarDeportes(deportesNuevos);
+                        return LimpiarDeportes(deportesNuevos);
                     }
                 }
             }
@@ -183,7 +176,7 @@ namespace Bibloteca
         /// </summary>
         /// <param name="deportesNuevos"></param>
         /// <returns>bool</returns>
-        private bool limpiarDeportes(List<EDeporte> deportesNuevos)
+        private bool LimpiarDeportes(List<EDeporte> deportesNuevos)
         {
             this.Deportes.Clear();
             this.Deportes.AddRange(deportesNuevos);

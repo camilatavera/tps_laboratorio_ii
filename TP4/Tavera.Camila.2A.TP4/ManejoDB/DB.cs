@@ -27,7 +27,11 @@ namespace ManejoDB
         }
 
 
-        
+        /// <summary>
+        /// Trae el Esexo correspondiente
+        /// </summary>
+        /// <param name="pk"></param>
+        /// <returns></returns>
         static Esexo traerSexo(string pk)
         {
             if (pk == "f")
@@ -38,6 +42,11 @@ namespace ManejoDB
                 return Esexo.m;
         }
 
+
+        /// <summary>
+        /// Ingresa todos los socios de la base de datos en una lista
+        /// </summary>
+        /// <returns>List<Socio></returns>
         public static List<Socio> TraerSocios()
         {
             try
@@ -69,7 +78,10 @@ namespace ManejoDB
 
         }
 
-
+        /// <summary>
+        /// Ingresa todos los empleados operativos de la base de datos en una lista
+        /// </summary>
+        /// <returns>List<EmpleadoOperativo></returns>
         public static List<EmpleadoOperativo> TraerOperativos()
         {
             try
@@ -102,7 +114,10 @@ namespace ManejoDB
 
 
 
-
+        /// <summary>
+        /// Ingresa todos los federados de la base de datos en una lista
+        /// </summary>
+        /// <returns>List<Federado></returns>
         public static List<Federado> TraerFederados()
         {
             List<Federado> listFederados = new List<Federado>();
@@ -173,7 +188,10 @@ namespace ManejoDB
 
         }
 
-
+        /// <summary>
+        /// Ingresa todos los empleados deportivos de la base de datos en una lista
+        /// </summary>
+        /// <returns>List<EmpleadoDeportivo></returns>
         public static List<EmpleadoDeportivo> TraerEmpleadosDeportivos()
         {
             List<EmpleadoDeportivo> listDeportivos = new List<EmpleadoDeportivo>();
@@ -242,6 +260,11 @@ namespace ManejoDB
         }
 
 
+
+        /// <summary>
+        /// Busca todos los equipos en la base de datos y los agrega a una lista
+        /// </summary>
+        /// <returns>List<Equipo></returns>
         public static List<Equipo> TraerEquipos()
         {
             List<Equipo> equipos = new List<Equipo>();
@@ -280,7 +303,11 @@ namespace ManejoDB
 
         }
 
-
+        /// <summary>
+        /// Busca en la tabla de datos los equipos del empleado y se los agrega a su lista
+        /// </summary>
+        /// <param name="deportivo"></param>
+        /// <returns>EmpleadoDeportivo con los equipos incluidos </returns>
         public static EmpleadoDeportivo TraerEquiposPorDeportivo(EmpleadoDeportivo deportivo)
         {
             Equipo aux;
@@ -326,7 +353,11 @@ namespace ManejoDB
 
 
 
-
+        /// <summary>
+        /// Busca los deportes del federado y se los agrega a su atributo deportes
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <returns>Federado</returns>
         public static Federado TraerDeportesPorFederado(Federado federado)
         {
             List<EDeporte> deportesAux = new List<EDeporte>();
@@ -374,6 +405,15 @@ namespace ManejoDB
         }
 
 
+        /// <summary>
+        /// Agrega un empleado operativo a la tabla.
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="area"></param>
+        /// <returns>bool </returns>
         public static bool AgregarOperativo(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, EArea area)
         {
             try
@@ -397,7 +437,16 @@ namespace ManejoDB
         }
 
 
-
+        /// <summary>
+        /// Agrega un socio a la tabla
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <param name="deuda"></param>
+        /// <returns>bool</returns>
         public static bool AgregarSocio(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, int deuda)
         {
             try
@@ -421,6 +470,17 @@ namespace ManejoDB
         }
 
 
+
+        /// <summary>
+        /// Ejecuta la query para agregar un socio a la tabla 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <param name="deuda"></param>
+        /// <returns>bool</returns>
         private static bool CrearSocioDB(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, int deuda)
         {
            
@@ -462,7 +522,15 @@ namespace ManejoDB
 
         }
 
-
+        /// <summary>
+        ///Ejecuta la query para agregar un empleado operativo a la tabla 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="area"></param>
+        /// <returns></returns>
         private static bool CrearOperativoDB(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, EArea area)
         {
 
@@ -505,7 +573,17 @@ namespace ManejoDB
 
 
 
-
+        /// <summary>
+        /// Agrega un federado a la tabla
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <param name="deuda"></param>
+        /// <param name="deportes"></param>
+        /// <returns></returns>
         public static bool AgregarFederado(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, int deuda, List<EDeporte> deportes)
         {
             try
@@ -529,6 +607,16 @@ namespace ManejoDB
         }
 
 
+
+        /// <summary>
+        /// Agrega un empleado deportivo a la tabla con los datos que se pasean como parametro
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="equipos"></param>
+        /// <returns></returns>
         public static bool AgregarDeportivo(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, List<Equipo> equipos)
         {
             try
@@ -552,6 +640,15 @@ namespace ManejoDB
         }
 
 
+        /// <summary>
+        /// Ejecuta la query para agregar un empelado deportivo a la tabla 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="equipos"></param>
+        /// <returns></returns>
         private static bool CrearDeportivoDB(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, List<Equipo> equipos)
         {
 
@@ -591,7 +688,17 @@ namespace ManejoDB
 
 
 
-        //error si tiene problema en la base de datos
+        /// <summary>
+        /// ejecuta la query para agregar un federado a la tabla
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <param name="deuda"></param>
+        /// <param name="deportes"></param>
+        /// <returns></returns>
         private static bool CrearFederadoDB(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, int deuda, List<EDeporte> deportes)
         {
 
@@ -633,6 +740,13 @@ namespace ManejoDB
 
 
 
+
+        /// <summary>
+        /// Busca un federado en la tabla por su nombre y apellido
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <returns>Federado</returns>
         public static Federado BuscarFederado(string nombre, string apellido)
         {
             Federado federado;
@@ -678,6 +792,12 @@ namespace ManejoDB
         }
 
 
+        /// <summary>
+        /// Busca un empleado deportivo en la tabla por su nombre y apellido
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <returns>EmpleadoDeportivo</returns>
         public static EmpleadoDeportivo BuscarDeportivo(string nombre, string apellido)
         {
             EmpleadoDeportivo deportivo;
@@ -722,7 +842,11 @@ namespace ManejoDB
 
 
 
-
+        /// <summary>
+        /// Ejecuta query para agregar los equipos a los que pertenece el empleado a la tabla
+        /// </summary>
+        /// <param name="deportivo"></param>
+        /// <returns>bool</returns>
         public static bool AgregarEquiposDB(EmpleadoDeportivo deportivo)
         {
             try
@@ -761,7 +885,11 @@ namespace ManejoDB
 
 
 
-
+        /// <summary>
+        /// Ejecuta la query para agregar a la tabla los deportes del federado
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <returns>bool</returns>
             public static bool AgregarDeportesDB(Federado federado)
             {         
                 try
@@ -792,7 +920,11 @@ namespace ManejoDB
                 }
             }
 
-
+        /// <summary>
+        /// Ejecuta la query para agregar a la tabla los deportes del federado segun el id del federado y el id del deporte
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <returns>bool</returns>
         public static bool AgregarDeporte(int federado, int deporte)
         {
             try
@@ -820,10 +952,21 @@ namespace ManejoDB
             }
         }
 
-
+        /// <summary>
+        /// Actualiza los datos del federado
+        /// </summary>
+        /// <param name="aux"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <param name="deportes"></param>
+        /// <returns>bool</returns>
         public static bool UpdateFederado(Federado aux, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, List<EDeporte> deportes)
         {
             bool ret = false;
+            bool ret2 = false;
            
             try
             {
@@ -852,8 +995,8 @@ namespace ManejoDB
                         ret = true;
                     }
 
-                    ret= DB.ActualizarDeportes(aux, deportes);
-                    return ret;
+                    ret2= DB.ActualizarDeportes(aux, deportes);
+                    return ret || ret2;
                 }
                 
             }
@@ -867,6 +1010,16 @@ namespace ManejoDB
         }
 
 
+        /// <summary>
+        /// actualiza los datos del empleado deportivo en la tabla
+        /// </summary>
+        /// <param name="aux"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="equipos"></param>
+        /// <returns>bool</returns>
         public static bool UpdateDeportivo(EmpleadoDeportivo aux, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, List<Equipo> equipos)
         {
             bool ret = false;
@@ -910,6 +1063,17 @@ namespace ManejoDB
         }
 
 
+
+        /// <summary>
+        /// actualiza los datos del socio en la tabla
+        /// </summary>
+        /// <param name="aux"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="categoria"></param>
+        /// <returns></returns>
         public static bool UpdateSocio(Socio aux, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria)
         {
             bool ret = false;
@@ -953,7 +1117,16 @@ namespace ManejoDB
 
         }
 
-
+        /// <summary>
+        /// actualiza los datos del empleado operativo en la tabla
+        /// </summary>
+        /// <param name="aux"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
+        /// <param name="fechaNacimiento"></param>
+        /// <param name="area"></param>
+        /// <returns></returns>
         public static bool UpdateOperativo(EmpleadoOperativo aux, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, EArea area)
         {
             bool ret = false;
@@ -999,6 +1172,10 @@ namespace ManejoDB
         }
 
 
+        /// <summary>
+        /// Elimina los deportes del federado en la tabla
+        /// </summary>
+        /// <param name="federado"></param>
         public static void LimpiarTablaDeportes(Federado federado)
         {
 
@@ -1026,6 +1203,11 @@ namespace ManejoDB
 
         }
 
+
+        /// <summary>
+        /// Elimina los equiposdel empleado deportivo en la tabla
+        /// </summary>
+        /// <param name="deportivo"></param>
         public static void LimpiarTablaEquipos(EmpleadoDeportivo deportivo)
         {
 
@@ -1053,6 +1235,14 @@ namespace ManejoDB
 
         }
 
+
+
+        /// <summary>
+        /// Actualiza los deportes del federado en la tabla
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <param name="deportes"></param>
+        /// <returns>bool</returns>
         public static bool ActualizarDeportes(Federado federado, List<EDeporte> deportes)
         {
             try
@@ -1076,12 +1266,17 @@ namespace ManejoDB
 
 
 
-
+        /// <summary>
+        /// Actualiza los equipos del empelado en la tabla 
+        /// </summary>
+        /// <param name="deportivo"></param>
+        /// <param name="equipos"></param>
+        /// <returns>bool</returns>
         public static bool ActualizarEquipos(EmpleadoDeportivo deportivo, List<Equipo> equipos)
         {
             try
             {
-                if (deportivo.validarEquipos(equipos))
+                if (deportivo.ValidarEquipos(equipos))
                 {
                     LimpiarTablaEquipos(deportivo);
                     AgregarEquiposDB(deportivo);
@@ -1098,6 +1293,12 @@ namespace ManejoDB
 
         }
 
+
+        /// <summary>
+        /// Actualiza la deuda del socio en la tabla
+        /// </summary>
+        /// <param name="socio"></param>
+        /// <returns>bool</returns>
         public static bool UpdateDeudaSocio(Socio socio)
         {
             try
@@ -1111,6 +1312,12 @@ namespace ManejoDB
             }
         }
 
+
+        /// <summary>
+        /// Actualiza la deuda del federado en la tabla
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <returns></returns>
         public static bool UpdateDeudaFederado(Federado federado)
         {
             try
@@ -1124,6 +1331,16 @@ namespace ManejoDB
             }
         }
 
+
+
+        /// <summary>
+        /// Ejectua la query de actualizacion de una tabla segun los datos que se envian por parametro
+        /// </summary>
+        /// <param name="tabla"></param>
+        /// <param name="campo"></param>
+        /// <param name="valorCampo"></param>
+        /// <param name="id"></param>
+        /// <param name="valor_id"></param>
         public static void QueryActualizacion(string tabla, string campo, string valorCampo, string id, int valor_id)
         {
             string query = $"UPDATE {tabla} SET {campo}=@VALOR_CAMPO WHERE {id}=@VALOR_ID";
@@ -1150,7 +1367,12 @@ namespace ManejoDB
                 connection.Close();
             }
         }
-
+        /// <summary>
+        /// Ejecuta una query de borrar registros segun lo que se envia como parametro
+        /// </summary>
+        /// <param name="tabla"></param>
+        /// <param name="id"></param>
+        /// <param name="idValor"></param>
         public static void QueryBorrar(string tabla, string id, int idValor)
         {
             string query = $"DELETE FROM {tabla} WHERE {id}=@VALOR_ID";
@@ -1177,6 +1399,13 @@ namespace ManejoDB
             }
         }
 
+
+
+        /// <summary>
+        /// Borra un federado de la tabla
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <returns>bool</returns>
         public static bool BorrarFederado(Federado federado)
         {
             try
@@ -1192,7 +1421,11 @@ namespace ManejoDB
             }
         }
 
-
+        /// <summary>
+        /// Borra un socio de la tabla
+        /// </summary>
+        /// <param name="socio"></param>
+        /// <returns>bool</returns>
         public static bool BorrarSocio(Socio socio)
         {
             try

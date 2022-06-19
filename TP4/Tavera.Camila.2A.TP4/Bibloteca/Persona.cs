@@ -5,7 +5,7 @@ namespace Bibloteca
 {
 
     
-    [XmlInclude(typeof(EmpleadoOperativo))]
+    
 
     public abstract class Persona
     {
@@ -15,10 +15,7 @@ namespace Bibloteca
         protected Esexo sexo;
         protected DateTime fechaNacimiento;
 
-        public Persona()
-        {
-
-        }
+        
 
         protected Persona(int id, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento)
         {
@@ -94,7 +91,7 @@ namespace Bibloteca
         /// <param name="sexo"></param>
         /// <param name="fechaNacimiento"></param>
         /// <returns>bool</returns>
-        public bool actualizarDatos(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento)
+        public bool ActualizarDatos(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento)
         {
             bool ret = false;
             if (this.nombre != nombre)

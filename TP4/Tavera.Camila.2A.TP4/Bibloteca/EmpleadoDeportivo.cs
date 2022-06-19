@@ -11,11 +11,7 @@ namespace Bibloteca
         
         List<Equipo> equipos;
 
-        public EmpleadoDeportivo()
-        {
-
-        }
-
+      
         public EmpleadoDeportivo(int id, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento) :
             base(id, nombre, apellido, sexo, fechaNacimiento)
         {
@@ -60,7 +56,7 @@ namespace Bibloteca
         /// </summary>
         /// <param name="equipo"></param>
         /// <returns></returns>
-        public bool borrarEquipo(Equipo equipo)
+        public bool BorrarEquipo(Equipo equipo)
         {
             if(this - equipo)
             {
@@ -125,7 +121,7 @@ namespace Bibloteca
         /// </summary>
         /// <param name="listaNueva"></param>
         /// <returns>bool</returns>
-        public bool validarEquipos(List<Equipo> listaNueva)
+        public bool ValidarEquipos(List<Equipo> listaNueva)
         {
             bool ret = false;
             foreach (Equipo item in listaNueva)

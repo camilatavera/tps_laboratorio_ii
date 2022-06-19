@@ -39,14 +39,13 @@ namespace AdministracionClub
             else if (form==EFormEmpleado.deportivo)
             {
                 
-               //tratar de hacer un try para castear (deportivo)persona
-                this.deportivo = Club.buscarDeportivo(persona);
+                this.deportivo = Club.BuscarDeportivo(persona);
                 equiposAux = new List<Equipo>(this.deportivo.Equipos);
               
             }
             else if (form== EFormEmpleado.operativo)
             {
-                this.operativo = Club.buscarOperativo(persona);  
+                this.operativo = Club.BuscarOperativo(persona);  
             }
 
             this.Text = $"Detalle del empleado {persona.Apellido}";

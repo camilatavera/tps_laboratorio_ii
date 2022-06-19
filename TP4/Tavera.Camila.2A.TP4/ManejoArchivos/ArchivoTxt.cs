@@ -16,6 +16,7 @@ namespace ManejoArchivos
         {
             try
             {
+                
                 using (StreamWriter sw = new StreamWriter(path, append))
                 {
                     sw.WriteLine(dato);

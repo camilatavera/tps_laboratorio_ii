@@ -25,7 +25,7 @@ namespace ManejoDB
 
 
          //   <summary>
-        //Invoca los eventos y trae los compradores de la base de datos.
+        //Invoca los eventos y trae los empleados de la base de datos.
         // </summary>
         public void TraerEmpleados()
         {
@@ -54,7 +54,9 @@ namespace ManejoDB
 
         }
 
-
+        //   <summary>
+        //Invoca los eventos y trae los socios y federados de la base de datos.
+        // </summary>
         public void TraerSociosFederados()
         {
 
@@ -82,6 +84,12 @@ namespace ManejoDB
 
         }
 
+
+        /// <summary>
+        /// Corre las tareas segun corresponda
+        /// </summary>
+        /// <param name="form"></param>
+        /// <returns>Task</returns>
         public Task InicioTask(EForm form)
         {
             Task tarea;
