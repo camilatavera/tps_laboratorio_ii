@@ -1,0 +1,27 @@
+{
+  "Categoria": 0,
+  "CuotaSocial": 2000,
+  "APagar": 2000,
+  "Nombre": "Marcos",
+  "Apellido": "Ludovico",
+  "Sexo": 1,
+  "FechaNacimiento": "2010-12-21T00:00:00"
+}
+{
+  "Categoria": 0,
+  "CuotaSocial": 2000,
+  "APagar": 8000,
+  "Nombre": "Mariano",
+  "Apellido": "Gomez",
+  "Sexo": 1,
+  "FechaNacimiento": "2004-04-04T00:00:00"
+}
+{
+  "Categoria": 2,
+  "CuotaSocial": 4200,
+  "APagar": 4400,
+  "Nombre": "Nicolas",
+  "Apellido": "Sazz",
+  "Sexo": 1,
+  "FechaNacimiento": "1987-04-21T00:00:00"
+}
