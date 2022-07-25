@@ -34,8 +34,7 @@ namespace AdministracionClub
                     
                 }
                 return;
-            }
-            
+            }          
             else if (form==EFormEmpleado.deportivo)
             {
                 

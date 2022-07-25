@@ -47,7 +47,10 @@ namespace AdministracionClub
                 operativos = ser.Leer(arch);
                 Club.Operativos.AddRange(operativos);
             }
-            catch { }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
 
             
 

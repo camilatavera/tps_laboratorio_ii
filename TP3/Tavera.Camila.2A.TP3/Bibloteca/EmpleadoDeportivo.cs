@@ -16,10 +16,11 @@ namespace Bibloteca
 
         }
 
-        public EmpleadoDeportivo(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, List<Equipo> equipos) :
+        public EmpleadoDeportivo(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento) :
             base(nombre, apellido, sexo, fechaNacimiento)
         {
-            equipos = new List<Equipo>(equipos);
+            equipos = new List<Equipo>();
+           
            
         }
 
@@ -61,11 +62,10 @@ namespace Bibloteca
         public int CalcularSueldo()
         {
             int sueldoBase = 80000;
-            int cantEquipos = Equipos.Count;
 
-            if (cantEquipos > 1)
+            if (Equipos is not null && Equipos.Count > 1)
             {
-                sueldoBase = sueldoBase + (cantEquipos * 5000);
+                sueldoBase = sueldoBase + (Equipos.Count * 5000);
             }
 
             return sueldoBase;

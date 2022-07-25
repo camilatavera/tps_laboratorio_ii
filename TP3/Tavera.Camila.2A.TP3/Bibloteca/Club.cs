@@ -172,13 +172,18 @@ namespace Bibloteca
         /// <returns>true o lanza excepcion</returns>
         public static bool agregarDeportivo(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, List<Equipo> equipos)
         {
-            EmpleadoDeportivo deportivo = new EmpleadoDeportivo(nombre, apellido, sexo, fechaNacimiento, equipos);
+            EmpleadoDeportivo deportivo = new EmpleadoDeportivo(nombre, apellido, sexo, fechaNacimiento);
             foreach (EmpleadoDeportivo item in Deportivos)
             {
                 if (item == deportivo)
                 {
                     throw new ExPersonaRepetida($"El Empleado Deportivo {apellido} ya esta anotado");
                 }
+            }
+
+            foreach(Equipo item in equipos)
+            {
+                bool a = deportivo + item;
             }
 
             deportivos.Add(deportivo);
@@ -477,9 +482,11 @@ namespace Bibloteca
             List<Equipo> listEquipo3 = new List<Equipo>();
             listEquipo3.Add(equipo6);
 
-            EmpleadoDeportivo deportivo1 = new EmpleadoDeportivo("Mariano", "Martinez", Esexo.m, new DateTime(1987, 06, 21), listEquipo1);
-            EmpleadoDeportivo deportivo2 = new EmpleadoDeportivo("Rosa", "Miriams", Esexo.f, new DateTime(1960, 05, 10), listEquipo2);
-            EmpleadoDeportivo deportivo3 = new EmpleadoDeportivo("Jose", "Mexon", Esexo.m, new DateTime(1985, 07, 15), listEquipo3);
+            //EmpleadoDeportivo deportivo1 = new EmpleadoDeportivo("Mariano", "Martinez", Esexo.m, new DateTime(1987, 06, 21), listEquipo1);
+            //EmpleadoDeportivo deportivo2 = new EmpleadoDeportivo("Rosa", "Miriams", Esexo.f, new DateTime(1960, 05, 10), listEquipo2);
+            EmpleadoDeportivo deportivo3 = new EmpleadoDeportivo("Jose", "Mexon", Esexo.m, new DateTime(1985, 07, 15));
+            bool a = deportivo3 + equipo1;
+            a = deportivo3 + equipo2;
 
  
 
@@ -494,8 +501,8 @@ namespace Bibloteca
             federados.Add(federado2);
             federados.Add(federado3);
 
-            deportivos.Add(deportivo1);
-            deportivos.Add(deportivo2);
+            //deportivos.Add(deportivo1);
+            //deportivos.Add(deportivo2);
             deportivos.Add(deportivo3);
 
             //operativos.Add(operativo1);

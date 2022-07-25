@@ -70,15 +70,21 @@ namespace AdministracionClub
                 try
                 {
                     EmpleadoDeportivo deportivo = (EmpleadoDeportivo)lst_personas.SelectedItem;
+                   // deportivo = Club.buscarDeportivo(deportivo);
                     FrmEmpleadoDetalle<EmpleadoDeportivo> frm = new FrmEmpleadoDetalle<EmpleadoDeportivo>(deportivo, EFormEmpleado.deportivo);
                     frm.Show();
                 }
-                catch (Exception)
+                catch (InvalidCastException ex)
                 {
-                    EmpleadoOperativo operativo = (EmpleadoOperativo)lst_personas.SelectedItem;
-                    FrmEmpleadoDetalle<EmpleadoOperativo> frm = new FrmEmpleadoDetalle<EmpleadoOperativo>(operativo, EFormEmpleado.operativo);
-                    frm.Show();
+                    //EmpleadoOperativo operativo = (EmpleadoOperativo)lst_personas.SelectedItem;
+                    //FrmEmpleadoDetalle<EmpleadoOperativo> frm = new FrmEmpleadoDetalle<EmpleadoOperativo>(operativo, EFormEmpleado.operativo);
+                    //frm.Show();
+                    MessageBox.Show(ex.Message);
 
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show($"{ex.Message} errrooooorr");
                 }
                 this.Close();
             }

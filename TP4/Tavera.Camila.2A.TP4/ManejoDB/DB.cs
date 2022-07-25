@@ -599,6 +599,10 @@ namespace ManejoDB
             {
                 throw;
             }
+            catch (InvalidOperationException)
+            {
+                throw;
+            }
             catch (Exception ex)
             {
 
