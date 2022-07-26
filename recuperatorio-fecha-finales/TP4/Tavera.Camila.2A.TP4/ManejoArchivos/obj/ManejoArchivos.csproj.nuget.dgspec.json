@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\ManejoArchivos\\ManejoArchivos.csproj": {}
+    "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\ManejoArchivos\\ManejoArchivos.csproj": {}
   },
   "projects": {
-    "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\ManejoArchivos\\ManejoArchivos.csproj": {
+    "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\ManejoArchivos\\ManejoArchivos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\ManejoArchivos\\ManejoArchivos.csproj",
+        "projectUniqueName": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\ManejoArchivos\\ManejoArchivos.csproj",
         "projectName": "ManejoArchivos",
-        "projectPath": "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\ManejoArchivos\\ManejoArchivos.csproj",
+        "projectPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\ManejoArchivos\\ManejoArchivos.csproj",
         "packagesPath": "C:\\Users\\caami\\.nuget\\packages\\",
-        "outputPath": "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\ManejoArchivos\\obj\\",
+        "outputPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\ManejoArchivos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\caami\\AppData\\Roaming\\NuGet\\NuGet.Config",

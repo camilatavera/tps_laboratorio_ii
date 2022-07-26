@@ -40,16 +40,18 @@ namespace Bibloteca
             return this + equipo;
         }
 
+
+        /// <summary>
+        /// Agrega un equipo al atributo equipos
+        /// </summary>
+        /// <param name="equipo"></param>
+        /// <returns></returns>
         public bool AgregarEquipo(Equipo equipo)
         {
             return this + equipo;
         }
 
-        //para los deportivos
-        //////////public void AgregarEquipos(List<Equipo> equipos)
-        //////////{
-        //////////    this.Equipos.AddRange(equipos);
-        //////////}
+       
 
 
         /// <summary>

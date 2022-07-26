@@ -107,26 +107,7 @@ namespace Bibloteca
 
         } 
 
-        /// <summary>
-        /// Actualiza los valores de los atributos del objeto si corresponde
-        /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="sexo"></param>
-        /// <param name="fechaNacimiento"></param>
-        /// <param name="categoria"></param>
-        /// <returns>bool</returns>
-        //public  bool ActualizarDatos(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria)
-        //{
-        //    bool ret=ActualizarDatos(nombre, apellido, sexo, fechaNacimiento);
-        //    if (this.Categoria != categoria)
-        //    {
-        //        this.categoria = categoria;
-        //        ret = true;
-        //    }
-
-        //    return ret;
-        //}
+       
 
         /// <summary>
         /// valida que el monto coincida con lo que debe el socio y con lo que abona de cuota

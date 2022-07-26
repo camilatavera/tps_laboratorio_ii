@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0/xW80zFegoZ/2Dl0IrrrG0m8jCCQB4xlX0FnPek7WovtH1Bhaz6apDit93dtdkhEZf76xbzJsJ7T3OPXm52Og==",
+  "dgSpecHash": "QNWP613UZp5q9hi0Nijgg5PcKbTtt1IU08Uyzll2wm0o9jsEq6PLyq4GYn6LlOkeM1pqyDLNsawq6mHcNIwb0g==",
   "success": true,
-  "projectFilePath": "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\TestUnitarios\\TestUnitarios.csproj",
+  "projectFilePath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\TestUnitarios\\TestUnitarios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\caami\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\caami\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",

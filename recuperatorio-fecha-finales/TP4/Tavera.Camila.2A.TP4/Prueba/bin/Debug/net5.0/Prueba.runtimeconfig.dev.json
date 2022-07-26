@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\caami\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\caami\\.nuget\\packages"
-    ]
-  }
-}

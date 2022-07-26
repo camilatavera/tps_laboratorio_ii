@@ -46,7 +46,7 @@ namespace Bibloteca
 
 
         /// <summary>
-        /// Propiedad de lectura del atributo Federados
+        /// Propiedad de lectura y escritura del atributo Federados
         /// </summary>
         public static List<Federado> Federados
         {
@@ -54,6 +54,10 @@ namespace Bibloteca
             set { federados = value; }
         }
 
+
+        /// <summary>
+        /// propiedad de lectura y escritura del atributo equipos 
+        /// </summary>
         public static List<Equipo> Equipos
         {
             get { return equipos; }
@@ -169,138 +173,6 @@ namespace Bibloteca
 
 
 
-        /// <summary>
-        /// autaliza los atributos del objeto si corresponde
-        /// </summary>
-        /// <param name="socio"></param>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="sexo"></param>
-        /// <param name="fechaNacimiento"></param>
-        /// <param name="categoria"></param>
-        /// <returns>bool</returns>
-        //public static bool UpdateSocio(Socio socio, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria)
-        //{
-        //    Socio aux;
-        //    for (int i = 0; i < Socios.Count; i++)
-        //    {
-        //        aux = socios[i];
-        //        if (aux == socio)
-        //        {
-        //            return aux.ActualizarDatos(nombre, apellido, sexo, fechaNacimiento,categoria);
-        //        }
-        //    }
-
-        //    return false;
-        //}
-
-        /// <summary>
-        /// autaliza los atributos del objeto si corresponde
-        /// </summary>
-        /// <param name="federado"></param>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="sexo"></param>
-        /// <param name="fechaNacimiento"></param>
-        /// <param name="categoria"></param>
-        /// <param name="deportes"></param>
-        /// <returns>bool </returns>
-        //public static bool UpdateFederado(Federado federado, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, ECategoria categoria, List<EDeporte> deportes)
-        //{
-        //    Federado aux;
-        //    bool ret1;
-        //    bool ret2;
-
-        //    try
-        //    {
-        //        for (int i = 0; i < Federados.Count; i++)
-        //        {
-        //            aux = Federados[i];
-        //            if (aux == federado)
-        //            {
-        //                ret1=aux.ActualizarDatos(nombre, apellido, sexo, fechaNacimiento, categoria);
-        //                ret2= federado.ValidarDeportes(deportes);
-        //                return ret1||ret2;
-
-        //            }
-        //        }
-        //    }
-        //    catch (NoHayDeportesException)
-        //    {
-        //        throw;
-        //    }
-
-
-        //    return false;          
-        //}
-
-
-        /// <summary>
-        /// autaliza los atributos del objeto si corresponde
-        /// </summary>
-        /// <param name="deportivo"></param>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="sexo"></param>
-        /// <param name="fechaNacimiento"></param>
-        /// <param name="deportes"></param>
-        /// <returns>bool</returns>
-        ////public static bool UpdateDeportivo(EmpleadoDeportivo deportivo, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, List<Equipo> deportes)
-        ////{
-
-        ////    EmpleadoDeportivo aux;
-        ////    bool ret1;
-        ////    bool ret2;
-
-        ////    try
-        ////    {
-        ////        for (int i = 0; i < Deportivos.Count; i++)
-        ////        {
-        ////            aux = Deportivos[i];
-        ////            if (aux == deportivo)
-        ////            {
-        ////                ret1 = ((Persona)aux).ActualizarDatos(nombre, apellido, sexo, fechaNacimiento);
-        ////                ret2 = aux.ValidarEquipos(deportes);
-        ////                return ret1 || ret2;
-
-        ////            }
-        ////        }
-        ////    }
-        ////    catch (NoHayDeportesException)
-        ////    {
-        ////        throw;
-        ////    }
-
-
-        ////    return false;
-        ////}
-
-
-        ///// <summary>
-        ///// autaliza los atributos del objeto si corresponde
-        ///// </summary>
-        ///// <param name = "operativo" ></ param >
-        ///// < param name="nombre"></param>
-        ///// <param name = "apellido" ></ param >
-        ///// < param name="sexo"></param>
-        ///// <param name = "fechaNacimiento" ></ param >
-        ///// < param name="area"></param>
-        ///// <returns>bool</returns>
-        ////public static bool UpdateOperativo(EmpleadoOperativo operativo, string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, EArea area)
-        ////{
-        ////    EmpleadoOperativo aux;
-        ////    for (int i = 0; i < Socios.Count; i++)
-        ////    {
-        ////        aux = operativos[i];
-        ////        if (aux == operativo)
-        ////        {
-        ////            return aux.ActualizarDatos(nombre, apellido, sexo, fechaNacimiento, area);
-        ////        }
-        ////    }
-
-        ////    return false;
-        ////}
-
 
         /// <summary>
         /// Busca al objeto pasado por parametro en la lista Operativos de la clase
@@ -337,6 +209,13 @@ namespace Bibloteca
             return null;
         }
 
+        /// <summary>
+        /// Busca al socio en la lista de socios y lo devuelve mediante la 
+        /// variable que le paso por parametro
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <param name="socio"></param>
+        /// <returns>bool</returns>
         public static bool BuscarSocio(Persona persona, out Socio socio)
         {
             foreach (Socio item in Socios)
@@ -352,7 +231,13 @@ namespace Bibloteca
         }
 
 
-
+        /// <summary>
+        /// Busca al federado en la lista de federados y lo devuelve mediante la 
+        /// variable que le paso por parametro
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <param name="federado"></param>
+        /// <returns>bool</returns>
         public static bool BuscarFederado(Persona persona, out Federado federado)
         {
             foreach (Federado item in Federados)
@@ -470,20 +355,6 @@ namespace Bibloteca
 
         }
 
-        //public static bool validardepos(Federado federado, List<EDeporte> deportesNuevos)
-        //{
-        //    foreach (EDeporte item in deportesNuevos)
-        //    {
-        //        if (!federado.Deportes.Contains(item))
-        //        {
-        //            return false;
-        //        }
-        //    }
-        //    return true;
-        //}
-
-
-        
 
 
 

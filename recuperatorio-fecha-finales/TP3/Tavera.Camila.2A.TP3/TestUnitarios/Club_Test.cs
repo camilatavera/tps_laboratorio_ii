@@ -17,7 +17,7 @@ namespace TestUnitarios
             deportes1.Add(EDeporte.futbol);
             Federado aux = new Federado("Francisco", "Henaren", Esexo.m, new DateTime(2000, 12, 21), ECategoria.juveniles, deportes1);
 
-            Federado ret = Club.buscarFederado(aux);
+            Federado ret = Club.BuscarFederado(aux);
 
             Assert.IsNotNull(ret);
         }
@@ -33,5 +33,16 @@ namespace TestUnitarios
             Assert.IsTrue(ret);
 
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(PersonaRepetidaException))]
+        public void AgregarOperativo_Test()
+        {
+            Club.AgregarOperativo("Michael", "Mixasd", Esexo.m, new DateTime(2004, 4, 4), EArea.administrativo);
+            Club.AgregarOperativo("Michael", "Mixasd", Esexo.m, new DateTime(2004, 4, 4), EArea.administrativo);
+
+        }
+
+
     }
 }

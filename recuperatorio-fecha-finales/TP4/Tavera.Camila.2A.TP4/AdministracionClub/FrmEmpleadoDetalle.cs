@@ -145,6 +145,7 @@ namespace AdministracionClub
                         DB.QuitarEquipoDeportivo(deportivo.Id, equipo);
                         lst_deportes.Items.Remove(equipo);
                         deportivo.BorrarEquipo(equipo);
+                        EquiposAux.Remove(equipo);
                     }
                 }
             }
@@ -222,7 +223,7 @@ namespace AdministracionClub
                             this.Close();
                         }
                         else
-                            this.Close(); //agregue
+                            this.Close(); 
                     }
                 }
 
@@ -254,7 +255,7 @@ namespace AdministracionClub
                     this.Close();
                 }
                 else
-                    this.Close(); //agregue esto
+                    this.Close(); 
                 
          
             

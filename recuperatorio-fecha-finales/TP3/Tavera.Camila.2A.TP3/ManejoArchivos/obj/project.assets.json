@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\tps_laboratorio_ii_2022_recu\\TP3_recu\\Tavera.Camila.2A.TP3_recu\\ManejoArchivos\\ManejoArchivos.csproj",
+      "projectUniqueName": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP3\\Tavera.Camila.2A.TP3\\ManejoArchivos\\ManejoArchivos.csproj",
       "projectName": "ManejoArchivos",
-      "projectPath": "C:\\tps_laboratorio_ii_2022_recu\\TP3_recu\\Tavera.Camila.2A.TP3_recu\\ManejoArchivos\\ManejoArchivos.csproj",
+      "projectPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP3\\Tavera.Camila.2A.TP3\\ManejoArchivos\\ManejoArchivos.csproj",
       "packagesPath": "C:\\Users\\caami\\.nuget\\packages\\",
-      "outputPath": "C:\\tps_laboratorio_ii_2022_recu\\TP3_recu\\Tavera.Camila.2A.TP3_recu\\ManejoArchivos\\obj\\",
+      "outputPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP3\\Tavera.Camila.2A.TP3\\ManejoArchivos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\caami\\AppData\\Roaming\\NuGet\\NuGet.Config",

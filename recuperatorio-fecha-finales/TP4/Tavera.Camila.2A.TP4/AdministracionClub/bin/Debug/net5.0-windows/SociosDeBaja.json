@@ -68,3 +68,13 @@
   "Sexo": 0,
   "FechaNacimiento": "1985-07-19T00:10:45"
 }
+{
+  "Categoria": 2,
+  "CuotaSocial": 4000,
+  "APagar": 0,
+  "Id": 5,
+  "Nombre": "Jimena",
+  "Apellido": "Lopez",
+  "Sexo": 0,
+  "FechaNacimiento": "2004-07-20T00:00:00"
+}

@@ -133,7 +133,7 @@ namespace AdministracionClub
                             if (!chbox_basket.Checked && !chbox_futbol.Checked && !chbox_handball.Checked)
                             {
                                 MessageBox.Show("No se seleccionaron deportes para el federado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                                return;
                             }
                             else
                             {
@@ -178,10 +178,18 @@ namespace AdministracionClub
                 {
                     try
                     {
+
+                        if (!chbox_basket.Checked && !chbox_futbol.Checked && !chbox_handball.Checked)
+                        {
+                            MessageBox.Show("No se seleccionaron deportes para el federado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+
+                        }
                         List<EDeporte> deportesAux = new List<EDeporte>(levantarDeportes());
                         foreach(EDeporte item in deportesAux)
                         {
-                            DB.ValidarCupoEquipo(new Equipo(categoria, item, sexo));
+                            if(!federado.Deportes.Contains(item))
+                                DB.ValidarCupoEquipo(new Equipo(categoria, item, sexo));
                         }
 
                         if (DB.UpdateFederado(federado, nombre, apellido, sexo, nacimiento, categoria, deportesAux))

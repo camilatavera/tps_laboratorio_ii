@@ -44,7 +44,15 @@ namespace AdministracionClub
                 ECategoria categoria = (ECategoria)cmb_categoria.SelectedItem;
                 this.equipo = new Equipo(categoria, deporte, sexo);
 
-                DB.ValidarCupoEquipo(equipo);
+                if (!(FrmEmpleadoDetalle<EmpleadoDeportivo>.EquiposAux + equipo))
+                {
+                    MessageBox.Show("El empleado ya pertenece al equipo");
+                }
+                else if (idDeportivo != 0)
+                {
+                    DB.SumarEquipoDeportivo(idDeportivo, equipo);
+                    MessageBox.Show("El equipo quedara guardado", "Guardando equipo");
+                }
 
             }
            
@@ -54,15 +62,7 @@ namespace AdministracionClub
             }
 
             
-            if(!(FrmEmpleadoDetalle<EmpleadoDeportivo>.EquiposAux + equipo))
-            {
-                MessageBox.Show("El empleado ya pertenece al equipo");
-            }
-            else if(idDeportivo!=0)
-            {
-                MessageBox.Show("El equipo quedara guardado", "Guardando equipo");
-                DB.SumarEquipoDeportivo(idDeportivo, equipo);
-            }
+            
             
 
         }

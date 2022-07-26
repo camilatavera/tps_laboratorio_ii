@@ -261,47 +261,7 @@ namespace ManejoDB
 
 
 
-        /// <summary>
-        /// Busca todos los equipos en la base de datos y los agrega a una lista
-        /// </summary>
-        /// <returns>List<Equipo></returns>
-        //public static List<Equipo> TraerEquipos()
-        //{
-        //    List<Equipo> equipos = new List<Equipo>();
-        //    SqlDataReader dataReader;
-
-        //    try
-        //    {
-        //        if (connection.State != ConnectionState.Open)
-        //            connection.Open();
-        //        command.CommandText = "SELECT * FROM equipos";
-        //        dataReader = command.ExecuteReader();
-
-
-        //        while (dataReader.Read())
-        //        {
-        //            int id = int.Parse(dataReader["ID_EQUIPO"].ToString());
-
-        //            equipos.Add(new Equipo(id, (EDeporte)(int)dataReader["DEPORTE"], (ECategoria)(int)dataReader["CATEGORIA"],
-        //                traerSexo(dataReader["SEXO"].ToString())));
-        //        }
-
-        //        Club.Equipos.AddRange(equipos);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        throw new ExceptionDB(ex.Message);
-        //    }
-        //    finally
-        //    {
-        //        connection.Close();
-        //    }
-
-        //    return Club.Equipos;
-
-        //}
+       
 
         /// <summary>
         /// Busca en la tabla de datos los equipos del empleado y se los agrega a su lista
@@ -386,6 +346,10 @@ namespace ManejoDB
 
 
 
+            }
+            catch (DeporteRepetidoException)
+            {
+                return federado;
             }
             catch (Exception ex)
             {
@@ -980,6 +944,12 @@ namespace ManejoDB
                 }
              }
 
+        /// <summary>
+        /// Agrega un federado al equipo en la tabla federados_equipos 
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <param name="equipo"></param>
+        /// <returns>bool </returns>
         public static bool SumarEquipoFederado(Federado federado, Equipo equipo)
         {
             try
@@ -1012,6 +982,12 @@ namespace ManejoDB
             }
         }
 
+        /// <summary>
+        /// Agrega un federado al equipo en la tabla deportivos_equipos 
+        /// </summary>
+        /// <param name="idDeportivo"></param>
+        /// <param name="equipo"></param>
+        /// <returns>bool</returns>
         public static bool SumarEquipoDeportivo(int idDeportivo, Equipo equipo)
         {
             try
@@ -1039,6 +1015,13 @@ namespace ManejoDB
             }
         }
 
+
+        /// <summary>
+        /// Quita al federado del equipo y libera un cupo
+        /// </summary>
+        /// <param name="federado"></param>
+        /// <param name="equipo"></param>
+        /// <returns>bool</returns>
         public static bool QuitarEquipoFederado(Federado federado, Equipo equipo)
         {
             try
@@ -1070,8 +1053,13 @@ namespace ManejoDB
             }
         }
 
-        
 
+        /// <summary>
+        /// Quita al empleado deportivo del equipo
+        /// </summary>
+        /// <param name="idDeportivo"></param>
+        /// <param name="equipo"></param>
+        /// <returns></returns>
         public static bool QuitarEquipoDeportivo(int idDeportivo, Equipo equipo)
         {
             try
@@ -1556,6 +1544,13 @@ namespace ManejoDB
             }
         }
 
+
+        /// <summary>
+        /// Valida si el equipo tiene un cupo libro
+        /// </summary>
+        /// <param name="equipo"></param>
+        /// <returns>bool</returns>
+
         public static bool ValidarCupoEquipo(Equipo equipo)
         {
 
@@ -1574,6 +1569,7 @@ namespace ManejoDB
                 {
                     int cupoOcupado = int.Parse(dataReader["OCUPADO"].ToString());
                     int cupoMax = int.Parse(dataReader["MAXIMO"].ToString());
+
                     
                     if (cupoMax == cupoOcupado)
                     {
@@ -1603,54 +1599,7 @@ namespace ManejoDB
         
 
 
-        //BORRAR!!!!!!!
-
-        //////public static bool agregarequipo(List<Equipo> equipos)
-        //////{
-        //////    try
-        //////    {
-        //////        if (connection.State != ConnectionState.Open)
-        //////            connection.Open();
-
-        //////        foreach (Equipo item in equipos)
-        //////        {
-        //////            command.CommandText = $"INSERT INTO equipos(ID_EQUIPO, DEPORTE, CATEGORIA, SEXO, OCUPADO, MAXIMO) " +
-        //////            "VALUES (@id_equipo, @deporte, @categoria, @sexo, @ocupado, @maximo)";
-
-        //////            command.Parameters.Clear();
-        //////            command.Parameters.AddWithValue("@id_equipo", item.Id);
-        //////            command.Parameters.AddWithValue("@deporte", (int)item.Deporte);
-        //////            command.Parameters.AddWithValue("@categoria", (int)item.Categoria);
-        //////            command.Parameters.AddWithValue("@sexo", item.Sexo.fkSexo());
-        //////            command.Parameters.AddWithValue("@ocupado", 0);
-        //////            command.Parameters.AddWithValue("@maximo", 20);
-
-        //////            command.ExecuteNonQuery();
-        //////        }
-        //////        return true;
-        //////    }
-        //////    catch (Exception ex)
-        //////    {
-        //////        throw new ExceptionDB(ex.Message);
-        //////    }
-        //////    finally
-        //////    {
-        //////        connection.Close();
-        //////    }
-        //////}
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
     }
 }

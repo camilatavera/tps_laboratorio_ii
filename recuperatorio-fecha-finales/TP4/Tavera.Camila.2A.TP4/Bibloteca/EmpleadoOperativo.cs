@@ -63,29 +63,7 @@ namespace Bibloteca
         }
 
 
-        /// <summary>
-        /// Actualiza los datos del empleado si corresponde
-        /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="sexo"></param>
-        /// <param name="fechaNacimiento"></param>
-        /// <param name="area"></param>
-        /// <returns>bool </returns>
-        //public bool ActualizarDatos(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento, EArea area)
-        //{
-        //    bool ret = base.ActualizarDatos(nombre, apellido, sexo, fechaNacimiento);
-        //    if (this.area != area)
-        //    {
-        //        this.area = area;
-        //        ret = true;
-        //    }
-
-        //    return ret;
-        //}
-
-
-
+       
 
     }
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\tps_laboratorio_ii_2022_recu\\TP3_recu\\Tavera.Camila.2A.TP3_recu\\Bibloteca\\Bibloteca.csproj",
+      "projectUniqueName": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP3\\Tavera.Camila.2A.TP3\\Bibloteca\\Bibloteca.csproj",
       "projectName": "Bibloteca",
-      "projectPath": "C:\\tps_laboratorio_ii_2022_recu\\TP3_recu\\Tavera.Camila.2A.TP3_recu\\Bibloteca\\Bibloteca.csproj",
+      "projectPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP3\\Tavera.Camila.2A.TP3\\Bibloteca\\Bibloteca.csproj",
       "packagesPath": "C:\\Users\\caami\\.nuget\\packages\\",
-      "outputPath": "C:\\tps_laboratorio_ii_2022_recu\\TP3_recu\\Tavera.Camila.2A.TP3_recu\\Bibloteca\\obj\\",
+      "outputPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP3\\Tavera.Camila.2A.TP3\\Bibloteca\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\caami\\AppData\\Roaming\\NuGet\\NuGet.Config",

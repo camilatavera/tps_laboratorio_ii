@@ -37,6 +37,12 @@ namespace Bibloteca
             }
         }
 
+
+        /// <summary>
+        /// Itera la lista de deportes que se le pasa por parametro y se la pasa a la 
+        /// funcion AgregarDeporte
+        /// </summary>
+        /// <param name="deportes"></param>
         public void AgregarDeportes(List<EDeporte> deportes)
         {
             foreach (EDeporte item in deportes)
@@ -102,17 +108,7 @@ namespace Bibloteca
             return cuota;
         }
 
-        /// <summary>
-        /// Borra el deporte de la lista si lo eencuentra
-        /// </summary>
-        /// <param name="deporte"></param>
-        /// <returns>bool</returns>
-        //public bool BorrarDeporte(EDeporte deporte)
-        //{
-        //    return this - deporte;
-        //}
-
-
+       
 
         /// <summary>
         /// Devuelve un string con los deportes del federado

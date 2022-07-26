@@ -6591,11 +6591,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\TestUnitarios\\TestUnitarios.csproj",
+      "projectUniqueName": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\TestUnitarios\\TestUnitarios.csproj",
       "projectName": "TestUnitarios",
-      "projectPath": "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\TestUnitarios\\TestUnitarios.csproj",
+      "projectPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\TestUnitarios\\TestUnitarios.csproj",
       "packagesPath": "C:\\Users\\caami\\.nuget\\packages\\",
-      "outputPath": "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\TestUnitarios\\obj\\",
+      "outputPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\TestUnitarios\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\caami\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6612,11 +6612,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\Bibloteca\\Bibloteca.csproj": {
-              "projectPath": "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\Bibloteca\\Bibloteca.csproj"
+            "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\Bibloteca\\Bibloteca.csproj": {
+              "projectPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\Bibloteca\\Bibloteca.csproj"
             },
-            "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\ManejoDB\\ManejoDB.csproj": {
-              "projectPath": "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\ManejoDB\\ManejoDB.csproj"
+            "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\ManejoDB\\ManejoDB.csproj": {
+              "projectPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\ManejoDB\\ManejoDB.csproj"
             }
           }
         }

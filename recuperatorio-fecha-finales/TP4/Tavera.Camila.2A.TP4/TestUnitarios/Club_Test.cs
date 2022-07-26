@@ -8,50 +8,27 @@ namespace TestUnitarios
     [TestClass]
     public class Club_Test
     {
-        
-        //[TestMethod]
-        //public void buscarFederado_Test()
-        //{
-        //    List<EDeporte> deportes1 = new List<EDeporte>();
-        //    deportes1.Add(EDeporte.handball);
-        //    deportes1.Add(EDeporte.futbol);
-        //    Federado aux = new Federado(1, "Francisco", "Henaren", Esexo.m, new DateTime(2000, 12, 21), ECategoria.juveniles, deportes1);
 
-        //    Federado ret = Club.buscarFederado(aux);
+        [TestMethod]
 
-        //    Assert.IsNotNull(ret);
-        //}
+        public void Buscar_Test()
+        {
+            EmpleadoOperativo operativo = new EmpleadoOperativo(100, "Michael", "Mixasd", Esexo.m, new DateTime(2004, 4, 4), EArea.administrativo);
+            Club.Operativos.Add(operativo);
+            EmpleadoOperativo aux = Club.BuscarOperativo((Persona)operativo);
+            Assert.IsNotNull(aux);
+
+        }
 
 
-        //[TestMethod]
-        //public void updateSocio_Test()
-        //{
-        //    Socio socio = new Socio(1, "Mariano", "Gomez", Esexo.m, new DateTime(2004, 4, 4), ECategoria.menores,0);
 
-        //    bool ret=Club.UpdateSocio(socio, socio.Nombre, socio.Apellido, Esexo.f, socio.FechaNacimiento, ECategoria.menores);
+        [TestMethod]
+        [ExpectedException(typeof(PersonaRepetidaException))]
+        public void ValidarExistenciaOperativo_Test()
+        {
+            Club.Operativos.Add(new EmpleadoOperativo(100, "Michael", "Mixasd", Esexo.m, new DateTime(2004, 4, 4), EArea.administrativo));
+            Club.ValidarExistenciaOperativo("Michael", "Mixasd");
 
-        //    Assert.IsTrue(ret);
-
-        //}
-
-
-        //[TestMethod]
-        //public void validardepos_Test()
-        //{
-        //    List<EDeporte> deportes = new List<EDeporte>();
-        //    deportes.Add(EDeporte.handball);
-        //    deportes.Add(EDeporte.futbol);
-
-        //    List<EDeporte> deportesNuevos = new List<EDeporte>();
-        //    deportesNuevos.Add(EDeporte.handball);
-        //    deportesNuevos.Add(EDeporte.basket);
-
-        //    Federado federado= new Federado(1, "Mariano", "Gomez", Esexo.m, new DateTime(2004, 4, 4), ECategoria.menores, 0, deportes);
-
-        //    bool ret = Club.validardepos(federado, deportesNuevos);
-
-        //    Assert.IsFalse(ret);
-
-        //}
+        }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tX/NBBEtx9w97UkIiGHROhPJ9OeC7OYKRqWtuSQP2d3w1H167uO8Xf3OBqE/arnYRRimOJSBDqrDmiTQ4n43hQ==",
+  "dgSpecHash": "VWAL3RzEjgKc8gn+n5zYRDEw+blvyxN0ESOlsXRIpnx+XRpd9QI2+tyRAsDueYMwXQMbbaXuIOsdIXw/D9GrQw==",
   "success": true,
-  "projectFilePath": "C:\\tps_laboratorio_ii_2022_recu\\TP4_recu\\Tavera.Camila.2A.TP4_recu\\AdministracionClub\\AdministracionClub.csproj",
+  "projectFilePath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP4\\Tavera.Camila.2A.TP4\\AdministracionClub\\AdministracionClub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\caami\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\caami\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

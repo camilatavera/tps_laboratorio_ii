@@ -83,39 +83,7 @@ namespace Bibloteca
             return $"Nombre completo: {Nombre} {Apellido} | Sexo: {Sexo} | Fecha: {FechaNacimiento.ToShortDateString()}";
         }
 
-        /// <summary>
-        /// Actualiza los valores de los atributos del objeto si corresponde
-        /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="sexo"></param>
-        /// <param name="fechaNacimiento"></param>
-        /// <returns>bool</returns>
-        //public bool ActualizarDatos(string nombre, string apellido, Esexo sexo, DateTime fechaNacimiento)
-        //{
-        //    bool ret = false;
-        //    if (this.nombre != nombre)
-        //    {
-        //        this.nombre = nombre;
-        //        ret = true;
-        //    }
-        //    if (this.apellido != apellido)
-        //    {
-        //        this.apellido = apellido;
-        //        ret = true;
-        //    }
-        //    if (this.sexo != sexo)
-        //    {
-        //        this.sexo = sexo;
-        //        ret = true;
-        //    }
-        //    if (this.fechaNacimiento != fechaNacimiento)
-        //    {
-        //        this.fechaNacimiento = fechaNacimiento;
-        //        ret = true;
-        //    }
-        //    return ret;
-        //}
+        
 
         public static bool operator ==(Persona a, Persona b)
         {

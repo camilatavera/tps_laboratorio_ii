@@ -69,7 +69,7 @@ namespace Bibloteca
         /// </summary>
         /// <param name="federado"></param>
         /// <returns>objeto encontrado o null</returns>
-        public static Federado buscarFederado(Socio federado)
+        public static Federado BuscarFederado(Socio federado)
         {
             foreach(Federado item in federados)
             {
@@ -482,8 +482,6 @@ namespace Bibloteca
             List<Equipo> listEquipo3 = new List<Equipo>();
             listEquipo3.Add(equipo6);
 
-            //EmpleadoDeportivo deportivo1 = new EmpleadoDeportivo("Mariano", "Martinez", Esexo.m, new DateTime(1987, 06, 21), listEquipo1);
-            //EmpleadoDeportivo deportivo2 = new EmpleadoDeportivo("Rosa", "Miriams", Esexo.f, new DateTime(1960, 05, 10), listEquipo2);
             EmpleadoDeportivo deportivo3 = new EmpleadoDeportivo("Jose", "Mexon", Esexo.m, new DateTime(1985, 07, 15));
 
             bool a = deportivo3 + equipo1;
@@ -501,15 +499,8 @@ namespace Bibloteca
             federados.Add(federado2);
             federados.Add(federado3);
 
-//            deportivos.Add(deportivo1);
-//            deportivos.Add(deportivo2);
             deportivos.Add(deportivo3);
 
-            //operativos.Add(operativo1);
-            //operativos.Add(operativo2);
-            //operativos.Add(operativo3);
-            //operativos.Add(operativo4);
-            //operativos.Add(operativo5);
 
 
 
