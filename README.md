@@ -1,3 +1,12 @@
+TP1
+No implementa operador por defecto +
+División por 0 en la calculadora devuelve ∞ ?
+Si pongo un número muy muy grande y convierto a binario convierte bien, pero si quiero volver a decimal devuelve 0?
+La propiedad Número es solo set, no se pide el get también
+Que la división por 0 devuelva el MinValue debería estar en la clase Operando, no en la clase del formulario
+ValidarOperador no valida nada. Siempre entra al if que está en Operar. Revisar la lógica
+La manera ideal de ordenar el código sería atributos, constructores, propiedades y métodos/sobrecargas
+
 TP3
 Si no puede cobrar, que de la opción de reintentar
 Colocar los títulos a los formularios
