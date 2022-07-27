@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\tps_laboratorio_ii_2022_recu\\TP1\\Tavera.Camila.2A.TP1.RECU\\MiCalculadora\\MiCalculadora.csproj",
+      "projectUniqueName": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP1\\Tavera.Camila.2A.TP1\\MiCalculadora\\MiCalculadora.csproj",
       "projectName": "MiCalculadora",
-      "projectPath": "C:\\tps_laboratorio_ii_2022_recu\\TP1\\Tavera.Camila.2A.TP1.RECU\\MiCalculadora\\MiCalculadora.csproj",
+      "projectPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP1\\Tavera.Camila.2A.TP1\\MiCalculadora\\MiCalculadora.csproj",
       "packagesPath": "C:\\Users\\caami\\.nuget\\packages\\",
-      "outputPath": "C:\\tps_laboratorio_ii_2022_recu\\TP1\\Tavera.Camila.2A.TP1.RECU\\MiCalculadora\\obj\\",
+      "outputPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP1\\Tavera.Camila.2A.TP1\\MiCalculadora\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\caami\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\tps_laboratorio_ii_2022_recu\\TP1\\Tavera.Camila.2A.TP1.RECU\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\tps_laboratorio_ii_2022_recu\\TP1\\Tavera.Camila.2A.TP1.RECU\\Entidades\\Entidades.csproj"
+            "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP1\\Tavera.Camila.2A.TP1\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\tps_laboratorio_ii_2022\\tps_laboratorio_ii\\recuperatorio-fecha-finales\\TP1\\Tavera.Camila.2A.TP1\\Entidades\\Entidades.csproj"
             }
           }
         }

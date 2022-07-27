@@ -11,6 +11,22 @@ namespace Entidades
 
         private double numero;
 
+        public Operando() : this(0)
+        {
+
+        }
+
+        public Operando(double numero) : this(numero.ToString())
+        {
+        }
+
+
+
+        public Operando(string strNumero)
+        {
+            this.Numero = strNumero;
+        }
+
         private string Numero
         {
             set
@@ -59,6 +75,8 @@ namespace Entidades
 
 
             return "Valor Invalido";
+
+            
         }
 
         /// <summary>
@@ -72,7 +90,7 @@ namespace Entidades
             string numeroBinario;
 
             numeroBinario = Convert.ToString(numeroEntero, 2);
-            if (numeroBinario != null)
+            if (!string.IsNullOrEmpty(numeroBinario))
                 return numeroBinario;
 
             return "Valor invalido";
@@ -122,22 +140,23 @@ namespace Entidades
             return ret;
         }
 
-
-        public Operando() : this(0)
+        /// <summary>
+        /// Valida que la cadena ingresada se pueda a castear a double
+        /// </summary>
+        /// <param name="strNumero">string strNumero: numero a castear</param>
+        /// <returns>Numero casteado o 0 si [ERROR] </returns>
+        private double ValidarOperando(string strNumero)
         {
-
+            double ret;
+            if (!double.TryParse(strNumero, out ret))
+            {
+                ret = 0;
+            }
+            return ret;
         }
 
-        public Operando(double numero) : this(numero.ToString())
-        {
-        }
 
 
-
-        public Operando(string strNumero)
-        {
-            this.Numero = strNumero;
-        }
 
         /// <summary>
         /// Sobrecarga del operador -
@@ -199,19 +218,6 @@ namespace Entidades
         }
 
 
-        /// <summary>
-        /// Valida que la cadena ingresada se pueda a castear a double
-        /// </summary>
-        /// <param name="strNumero">string strNumero: numero a castear</param>
-        /// <returns>Numero casteado o 0 si [ERROR] </returns>
-        private double ValidarOperando(string strNumero)
-        {
-            double ret;
-            if (!double.TryParse(strNumero, out ret))
-            {
-                ret = 0;
-            }
-            return ret;
-        }
+       
     }
 }

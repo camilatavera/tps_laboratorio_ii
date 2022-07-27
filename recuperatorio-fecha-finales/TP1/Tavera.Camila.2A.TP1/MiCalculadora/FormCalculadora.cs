@@ -46,14 +46,7 @@ namespace MiCalculadora
                 this.lstOperaciones.Items.Add(res);
                 this.lblResultado.Text = res;
 
-                //if (long.TryParse(res, out aux))
-                //{
-                //    this.lblResultado.Text = res;
-                //}
-                //else
-                //{
-                //    this.lblResultado.Text = "";
-                //}
+  
             }
         }
 
@@ -71,15 +64,7 @@ namespace MiCalculadora
             this.lstOperaciones.Items.Add(res);
             this.lblResultado.Text = res;
 
-            //if (long.TryParse(res, out aux))
-            //{
-            //    this.lblResultado.Text = res;
-            //}
-            //else
-            //{
-            //    this.lblResultado.Text = "";
-            //}
-
+           
         }
 
         /// <summary>
@@ -118,6 +103,7 @@ namespace MiCalculadora
                 {
                     operador = "+";
                 }
+                
                 this.lstOperaciones.Items.Add($"{txtN1} {operador} {txtN2} = {res}");
 
             }

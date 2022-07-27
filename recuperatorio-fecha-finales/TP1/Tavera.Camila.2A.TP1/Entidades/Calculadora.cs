@@ -43,14 +43,14 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Valida si el char ingresado es un operador
+        /// Valida el operador recibido sea + - *  / 
         /// </summary>
         /// <param name="operador">char operador</param>
-        /// <returns>"+" si no es un operador o "t" si lo es</returns>
+        /// <returns>el operador validado u operador + por defecto</returns>
         private static char ValidarOperador(char operador)
         {
 
-            if (operador == '+' || operador == '-' || operador == '*' || operador == '/')
+            if (operador == '-' || operador == '*' || operador == '/')
             {
                 return operador;
             }
